@@ -8,12 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		AA46803E20047699001FFA32 /* GDAXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA46803C20047699001FFA32 /* GDAXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA468052200477BA001FFA32 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468046200477BA001FFA32 /* Book.swift */; };
+		AA468053200477BA001FFA32 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468047200477BA001FFA32 /* Candle.swift */; };
+		AA468054200477BA001FFA32 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468048200477BA001FFA32 /* Currency.swift */; };
+		AA468055200477BA001FFA32 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468049200477BA001FFA32 /* Product.swift */; };
+		AA468056200477BA001FFA32 /* ServerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804A200477BA001FFA32 /* ServerTime.swift */; };
+		AA468057200477BA001FFA32 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804B200477BA001FFA32 /* Stat.swift */; };
+		AA468058200477BA001FFA32 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804C200477BA001FFA32 /* Ticker.swift */; };
+		AA468059200477BA001FFA32 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804D200477BA001FFA32 /* Trade.swift */; };
+		AA46805A200477BA001FFA32 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804F200477BA001FFA32 /* Client.swift */; };
+		AA46805B200477BA001FFA32 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468050200477BA001FFA32 /* Factory.swift */; };
+		AA46805C200477BA001FFA32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468051200477BA001FFA32 /* Router.swift */; };
+		AA468069200477CC001FFA32 /* Heartbeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46805F200477CC001FFA32 /* Heartbeat.swift */; };
+		AA46806A200477CC001FFA32 /* SocketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468060200477CC001FFA32 /* SocketError.swift */; };
+		AA46806B200477CC001FFA32 /* SocketMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468061200477CC001FFA32 /* SocketMsg.swift */; };
+		AA46806C200477CC001FFA32 /* SocketTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468062200477CC001FFA32 /* SocketTicker.swift */; };
+		AA46806D200477CC001FFA32 /* SocketChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468064200477CC001FFA32 /* SocketChannel.swift */; };
+		AA46806E200477CC001FFA32 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468065200477CC001FFA32 /* SocketClient.swift */; };
+		AA46806F200477CC001FFA32 /* SocketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468066200477CC001FFA32 /* SocketFactory.swift */; };
+		AA468070200477CC001FFA32 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468067200477CC001FFA32 /* SocketManager.swift */; };
+		AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468068200477CC001FFA32 /* SocketRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA46803920047699001FFA32 /* GDAXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDAXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA46803C20047699001FFA32 /* GDAXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAXKit.h; sourceTree = "<group>"; };
 		AA46803D20047699001FFA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA468046200477BA001FFA32 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		AA468047200477BA001FFA32 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
+		AA468048200477BA001FFA32 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		AA468049200477BA001FFA32 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AA46804A200477BA001FFA32 /* ServerTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTime.swift; sourceTree = "<group>"; };
+		AA46804B200477BA001FFA32 /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		AA46804C200477BA001FFA32 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		AA46804D200477BA001FFA32 /* Trade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
+		AA46804F200477BA001FFA32 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		AA468050200477BA001FFA32 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		AA468051200477BA001FFA32 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA46805F200477CC001FFA32 /* Heartbeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heartbeat.swift; sourceTree = "<group>"; };
+		AA468060200477CC001FFA32 /* SocketError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketError.swift; sourceTree = "<group>"; };
+		AA468061200477CC001FFA32 /* SocketMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketMsg.swift; sourceTree = "<group>"; };
+		AA468062200477CC001FFA32 /* SocketTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTicker.swift; sourceTree = "<group>"; };
+		AA468064200477CC001FFA32 /* SocketChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketChannel.swift; sourceTree = "<group>"; };
+		AA468065200477CC001FFA32 /* SocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
+		AA468066200477CC001FFA32 /* SocketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFactory.swift; sourceTree = "<group>"; };
+		AA468067200477CC001FFA32 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		AA468068200477CC001FFA32 /* SocketRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +86,78 @@
 		AA46803B20047699001FFA32 /* GDAXKit */ = {
 			isa = PBXGroup;
 			children = (
-				AA46803C20047699001FFA32 /* GDAXKit.h */,
+				AA46805D200477CC001FFA32 /* SocketFeed */,
+				AA468044200477BA001FFA32 /* MarketData */,
 				AA46803D20047699001FFA32 /* Info.plist */,
+				AA46803C20047699001FFA32 /* GDAXKit.h */,
 			);
 			path = GDAXKit;
+			sourceTree = "<group>";
+		};
+		AA468044200477BA001FFA32 /* MarketData */ = {
+			isa = PBXGroup;
+			children = (
+				AA468045200477BA001FFA32 /* Models */,
+				AA46804E200477BA001FFA32 /* Store */,
+			);
+			path = MarketData;
+			sourceTree = "<group>";
+		};
+		AA468045200477BA001FFA32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA468046200477BA001FFA32 /* Book.swift */,
+				AA468047200477BA001FFA32 /* Candle.swift */,
+				AA468048200477BA001FFA32 /* Currency.swift */,
+				AA468049200477BA001FFA32 /* Product.swift */,
+				AA46804A200477BA001FFA32 /* ServerTime.swift */,
+				AA46804B200477BA001FFA32 /* Stat.swift */,
+				AA46804C200477BA001FFA32 /* Ticker.swift */,
+				AA46804D200477BA001FFA32 /* Trade.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA46804E200477BA001FFA32 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AA46804F200477BA001FFA32 /* Client.swift */,
+				AA468050200477BA001FFA32 /* Factory.swift */,
+				AA468051200477BA001FFA32 /* Router.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AA46805D200477CC001FFA32 /* SocketFeed */ = {
+			isa = PBXGroup;
+			children = (
+				AA46805E200477CC001FFA32 /* Models */,
+				AA468063200477CC001FFA32 /* Store */,
+			);
+			path = SocketFeed;
+			sourceTree = "<group>";
+		};
+		AA46805E200477CC001FFA32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA46805F200477CC001FFA32 /* Heartbeat.swift */,
+				AA468060200477CC001FFA32 /* SocketError.swift */,
+				AA468061200477CC001FFA32 /* SocketMsg.swift */,
+				AA468062200477CC001FFA32 /* SocketTicker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA468063200477CC001FFA32 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AA468064200477CC001FFA32 /* SocketChannel.swift */,
+				AA468065200477CC001FFA32 /* SocketClient.swift */,
+				AA468066200477CC001FFA32 /* SocketFactory.swift */,
+				AA468067200477CC001FFA32 /* SocketManager.swift */,
+				AA468068200477CC001FFA32 /* SocketRequest.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +239,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA46806D200477CC001FFA32 /* SocketChannel.swift in Sources */,
+				AA46805C200477BA001FFA32 /* Router.swift in Sources */,
+				AA46806A200477CC001FFA32 /* SocketError.swift in Sources */,
+				AA468054200477BA001FFA32 /* Currency.swift in Sources */,
+				AA468069200477CC001FFA32 /* Heartbeat.swift in Sources */,
+				AA46806B200477CC001FFA32 /* SocketMsg.swift in Sources */,
+				AA468070200477CC001FFA32 /* SocketManager.swift in Sources */,
+				AA46806C200477CC001FFA32 /* SocketTicker.swift in Sources */,
+				AA468056200477BA001FFA32 /* ServerTime.swift in Sources */,
+				AA468058200477BA001FFA32 /* Ticker.swift in Sources */,
+				AA468055200477BA001FFA32 /* Product.swift in Sources */,
+				AA46805B200477BA001FFA32 /* Factory.swift in Sources */,
+				AA468057200477BA001FFA32 /* Stat.swift in Sources */,
+				AA468053200477BA001FFA32 /* Candle.swift in Sources */,
+				AA468059200477BA001FFA32 /* Trade.swift in Sources */,
+				AA468052200477BA001FFA32 /* Book.swift in Sources */,
+				AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */,
+				AA46805A200477BA001FFA32 /* Client.swift in Sources */,
+				AA46806E200477CC001FFA32 /* SocketClient.swift in Sources */,
+				AA46806F200477CC001FFA32 /* SocketFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
