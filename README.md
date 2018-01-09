@@ -32,10 +32,10 @@ $ pod install
 ## Usage
   Depending upon the data you want to access, you will use one of the two client objects.
   
-### Market Data API (Client)
+### Market Data API (MarketClient)
 ```swift
 // Initialize a client
-let client = Client()
+let client = MarketClient()
 
 // Call one of the public endpoint methods
 client.loadProducts { products in
@@ -44,7 +44,7 @@ client.loadProducts { products in
 
 // All methods take a closure to handle returned objects
 ```
-#### Client's Public Interface
+#### MarketClient's Public Interface
 
 * loadProducts ([Products Docs](https://docs.gdax.com/#products))
 * loadCurrencies ([Currencies](https://docs.gdax.com/#currencies))
