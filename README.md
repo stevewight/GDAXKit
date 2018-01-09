@@ -1,13 +1,33 @@
 # GDAXKit
-  Open source client library for accessing 💰*[gdax.com's](www.gdax.com)*💰 public market data through both the rest api and real time websocket feed
+  Unofficial Swift 4 client library for accessing 💰*[gdax.com's](www.gdax.com)*💰 public market data through both the rest api and real time websocket feed
   
 ## Getting Started
-  [Gdax.com](www.gdax.com) is "The Most Trusted Digital Asset Exchange" and offers an extensive real time market data API for a handful of the biggest 💵*digital currencies*💵
+  [Gdax.com](www.gdax.com) is "The Most Trusted Digital Asset Exchange" and offers an extensive real time market data API for a handful of the biggest 💵*cryptoCurrencies*💵
   
 ### The Docs
   Take a look at the [API Docs](https://docs.gdax.com/) for an overview and more information on the publicly available currency data.  
   
 Note: *GDAXKit* currently only makes public data available and does not allow for accessing endpoints or websockets that require authentication.
+
+## Installation
+The easiest way to use GDAXKit is with CocoaPods
+
+### Installation with CocoaPods
+To integrate GDAXKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+platform :ios, '11.0'
+
+target 'TargetName' do
+  pod 'GDAXKit', :git => 'https://github.com/stevewight/GDAXKit.git'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
   
 ## Usage
   Depending upon the data you want to access, you will use one of the two client objects.
