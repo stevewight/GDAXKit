@@ -8,15 +8,15 @@
 
 import UIKit
 
-class Candle: Decodable {
-    let time:Double
-    let low:Double
-    let high:Double
-    let open:Double
-    let close:Double
-    let volume:Double
+public class Candle: Decodable {
+    public let time:Double
+    public let low:Double
+    public let high:Double
+    public let open:Double
+    public let close:Double
+    public let volume:Double
     
-    required init(from decoder:Decoder) throws {
+    public required init(from decoder:Decoder) throws {
         var container = try decoder.unkeyedContainer()
         time = try container.decode(Double.self)
         low = try container.decode(Double.self)

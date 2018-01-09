@@ -17,7 +17,7 @@ enum SocketMsgType: String, Decodable {
     case none = "none"
 }
 
-class SocketMsg:Decodable {
+public class SocketMsg:Decodable {
     let type:SocketMsgType
     enum CodingKeys:String, CodingKey { case type }
     init() { type = .none }

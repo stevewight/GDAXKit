@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Client: NSObject {
+public class Client: NSObject {
 
     let baseURL = "https://api.gdax.com"
     var dataTask: URLSessionDataTask?

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Currency:Decodable {
-    let id:String
-    let name:String
-    let minSize:String
-    let status:String
-    let message:String?
+public class Currency:Decodable {
+    public let id:String
+    public let name:String
+    public let minSize:String
+    public let status:String
+    public let message:String?
     
     enum CodingKeys: String, CodingKey {
         case id, name, status, message

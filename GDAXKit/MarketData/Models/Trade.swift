@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Trade:Decodable {
-    let time:String
-    let tradeID:Int
-    let price:String
-    let side:String
-    let size:String
+public class Trade:Decodable {
+    public let time:String
+    public let tradeID:Int
+    public let price:String
+    public let side:String
+    public let size:String
     
     enum CodingKeys: String, CodingKey {
         case tradeID = "trade_id"

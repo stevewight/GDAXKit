@@ -8,17 +8,17 @@
 
 import UIKit
 
-class Product:Decodable {
-    let id:String
-    let baseCurrency:String
-    let quoteCurrency:String
-    let baseMinSize:String
-    let baseMaxSize:String
-    let quoteIncrement:String
-    let displayName:String
-    let status:String
-    let marginEnabled:Bool
-    let statusMessage:String?
+public class Product:Decodable {
+    public let id:String
+    public let baseCurrency:String
+    public let quoteCurrency:String
+    public let baseMinSize:String
+    public let baseMaxSize:String
+    public let quoteIncrement:String
+    public let displayName:String
+    public let status:String
+    public let marginEnabled:Bool
+    public let statusMessage:String?
     
     enum CodingKeys: String, CodingKey {
         case id, status
@@ -32,7 +32,7 @@ class Product:Decodable {
         case statusMessage = "status_message"
     }
     
-    init(pid:String) {
+    public init(pid:String) {
         id = pid
         baseCurrency = ""
         quoteCurrency = ""

@@ -9,13 +9,13 @@
 import UIKit
 import Starscream
 
-protocol SocketClientDelegate {
+public protocol SocketClientDelegate {
     func socketClientConnected()
     func socketClientDisconnected()
     func socketClientMessageObject(_ msgObj:Decodable)
 }
 
-class SocketClient {
+public class SocketClient {
 
     let delegate:SocketClientDelegate!
     let socketManager = SocketManager()
@@ -41,21 +41,21 @@ class SocketClient {
 
 extension SocketClient: WebSocketDelegate {
     
-    func websocketDidConnect(socket: WebSocketClient) {
+    public func websocketDidConnect(socket: WebSocketClient) {
         socketManager.sendRequest(products:products)
         delegate?.socketClientConnected()
     }
     
-    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         delegate?.socketClientDisconnected()
     }
     
-    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         let msgObject = SocketFactory.decodeSocketMsg(text)
         delegate?.socketClientMessageObject(msgObject)
     }
     
-    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         print("data: \(data.count)")
     }
 }

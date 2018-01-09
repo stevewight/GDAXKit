@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Heartbeat:Decodable {
-    let lastTradeID:Int
-    let productID:String
-    let sequence:Int
-    let time:String
+public class Heartbeat:Decodable {
+    public let lastTradeID:Int
+    public let productID:String
+    public let sequence:Int
+    public let time:String
     
     enum CodingKeys:String, CodingKey {
         case lastTradeID = "last_trade_id"

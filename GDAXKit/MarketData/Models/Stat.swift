@@ -8,13 +8,13 @@
 
 import UIKit
 
-class Stat:Decodable {
-    let open:String
-    let high:String
-    let low:String
-    let volume:String
-    let last:String
-    let volume30Day:String
+public class Stat:Decodable {
+    public let open:String
+    public let high:String
+    public let low:String
+    public let volume:String
+    public let last:String
+    public let volume30Day:String
     
     enum CodingKeys: String, CodingKey {
         case open, high, low, volume, last

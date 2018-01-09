@@ -8,18 +8,18 @@
 
 import UIKit
 
-class Book:Decodable {
-    let sequence:Int
-    let bids:[Order]
-    let asks:[Order]
+public class Book:Decodable {
+    public let sequence:Int
+    public let bids:[Order]
+    public let asks:[Order]
 }
 
-class Order:Decodable {
-    let price:String
-    let size:String
-    let numOrders:Int
+public class Order:Decodable {
+    public let price:String
+    public let size:String
+    public let numOrders:Int
     
-    required init(from decoder:Decoder) throws {
+    public required init(from decoder:Decoder) throws {
         var container = try decoder.unkeyedContainer()
         price = try container.decode(String.self)
         size = try container.decode(String.self)

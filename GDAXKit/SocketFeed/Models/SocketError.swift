@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SocketError:Decodable {
-    let type:String
+public class SocketError:Decodable {
+    public let type:String
 }
