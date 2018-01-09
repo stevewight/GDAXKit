@@ -1,5 +1,5 @@
 //
-//  Client.swift
+//  MarketClient.swift
 //  c01ns
 //
 //  Created by Steve on 12/28/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Client: NSObject {
+public class MarketClient: NSObject {
 
     let baseURL = "https://api.gdax.com"
     var dataTask: URLSessionDataTask?

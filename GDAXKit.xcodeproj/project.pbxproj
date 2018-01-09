@@ -16,7 +16,7 @@
 		AA468057200477BA001FFA32 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804B200477BA001FFA32 /* Stat.swift */; };
 		AA468058200477BA001FFA32 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804C200477BA001FFA32 /* Ticker.swift */; };
 		AA468059200477BA001FFA32 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804D200477BA001FFA32 /* Trade.swift */; };
-		AA46805A200477BA001FFA32 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804F200477BA001FFA32 /* Client.swift */; };
+		AA46805A200477BA001FFA32 /* MarketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46804F200477BA001FFA32 /* MarketClient.swift */; };
 		AA46805B200477BA001FFA32 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468050200477BA001FFA32 /* Factory.swift */; };
 		AA46805C200477BA001FFA32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468051200477BA001FFA32 /* Router.swift */; };
 		AA468069200477CC001FFA32 /* Heartbeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46805F200477CC001FFA32 /* Heartbeat.swift */; };
@@ -42,7 +42,7 @@
 		AA46804B200477BA001FFA32 /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		AA46804C200477BA001FFA32 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		AA46804D200477BA001FFA32 /* Trade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
-		AA46804F200477BA001FFA32 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		AA46804F200477BA001FFA32 /* MarketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketClient.swift; sourceTree = "<group>"; };
 		AA468050200477BA001FFA32 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		AA468051200477BA001FFA32 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AA46805F200477CC001FFA32 /* Heartbeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heartbeat.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		AA46804E200477BA001FFA32 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				AA46804F200477BA001FFA32 /* Client.swift */,
+				AA46804F200477BA001FFA32 /* MarketClient.swift */,
 				AA468050200477BA001FFA32 /* Factory.swift */,
 				AA468051200477BA001FFA32 /* Router.swift */,
 			);
@@ -256,7 +256,7 @@
 				AA468059200477BA001FFA32 /* Trade.swift in Sources */,
 				AA468052200477BA001FFA32 /* Book.swift in Sources */,
 				AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */,
-				AA46805A200477BA001FFA32 /* Client.swift in Sources */,
+				AA46805A200477BA001FFA32 /* MarketClient.swift in Sources */,
 				AA46806E200477CC001FFA32 /* SocketClient.swift in Sources */,
 				AA46806F200477CC001FFA32 /* SocketFactory.swift in Sources */,
 			);
