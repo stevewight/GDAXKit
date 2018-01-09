@@ -27,7 +27,7 @@ client.loadProducts { products in
 #### Client's Public Interface
 
 * loadProducts ([Products Docs](https://docs.gdax.com/#products))
-* loadCurrencies ([Currencies] (https://docs.gdax.com/#currencies))
+* loadCurrencies ([Currencies](https://docs.gdax.com/#currencies))
 * loadBook ([Order Book](https://docs.gdax.com/#get-product-order-book))
 * loadTicker ([Ticker](https://docs.gdax.com/#get-product-ticker))
 * loadTrades ([Trades](https://docs.gdax.com/#get-trades))
@@ -48,7 +48,7 @@ extension MyViewController: SocketClientDelegate {
 	}
 }
 ```
-Now we initialize our SocketClient, using dependency injection to pass our delegate object in, then starting our channel:
+Now we initialize our SocketClient, using dependency injection to pass our delegate object in, then start our specific channels stream:
 
 ```swift
 class MyViewController: UIViewController {
