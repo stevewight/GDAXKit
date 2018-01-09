@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary      = "Open source client library for accessing gdax.com's public market data"
   s.homepage     = "http://github.com/stevewight"
   s.license      = "MIT"
-  s.author             = { "Steve Wight" => "stevendouglaswight@gmail.com" }
+  s.author       = { "Steve Wight" => "stevendouglaswight@gmail.com" }
   s.platform     = :ios, "11.0"
   s.source       = { :git => "https://github.com/stevewight/GDAXKit.git", :tag => "0.0.1" }
   s.source_files = "GDAXKit/**/*.{h,m,swift}"
