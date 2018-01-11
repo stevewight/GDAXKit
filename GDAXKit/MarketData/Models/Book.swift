@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum BookLevel:Int {
+    case one = 1
+    case two = 2
+    case three = 3
+}
+
 public class Book:Decodable {
     public let sequence:Int
     public let bids:[Order]

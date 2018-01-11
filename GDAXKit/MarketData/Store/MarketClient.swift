@@ -27,7 +27,7 @@ public class MarketClient: NSObject {
     }
     
     public func loadBook(productID:String, complete:@escaping (_ books:[Book])->Void) {
-        makeRequest(router: Router.book(productID: productID), factory: Factory.book()) { items in
+        makeRequest(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { items in
             complete(items as! [Book])
         }
     }
@@ -45,7 +45,8 @@ public class MarketClient: NSObject {
     }
     
     public func loadHistoricRates(productID:String, complete:@escaping (_ candles:[Candle])->Void) {
-        makeRequest(router: Router.historic(productID: productID), factory: Factory.historic()) { items in
+        let params = [String:String]() //TODO: Implelemth historic params
+        makeRequest(router: Router.historic(productID: productID, params:params), factory: Factory.historic()) { items in
             complete(items as! [Candle])
         }
     }
@@ -63,7 +64,7 @@ public class MarketClient: NSObject {
     }
     
     private func makeRequest(router:Router, factory:Factory, complete:@escaping (_ items:[Any])->Void) {
-        dataTask = session.dataTask(with: router.url()) { data, response, error in
+        dataTask = session.dataTask(with: router.request()) { data, response, error in
             let response = response as? HTTPURLResponse
             
             if response?.statusCode == 200 {
