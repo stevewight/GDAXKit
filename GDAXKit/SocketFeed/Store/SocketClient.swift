@@ -12,7 +12,9 @@ import Starscream
 public protocol SocketClientDelegate {
     func socketClientConnected()
     func socketClientDisconnected()
-    func socketClientMessageObject(_ msgObj:Decodable)
+    func socketClientTick(_ tick:SocketTicker)
+    func socketClientHeartbeat(_ heartbeat:Heartbeat)
+    func socketClientError(_ error:SocketError)
 }
 
 public class SocketClient {
@@ -52,7 +54,13 @@ extension SocketClient: WebSocketDelegate {
     
     public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         let msgObject = SocketFactory.decodeSocketMsg(text)
-        delegate?.socketClientMessageObject(msgObject)
+        if msgObject is SocketTicker {
+            delegate?.socketClientTick(msgObject as! SocketTicker)
+        } else if msgObject is Heartbeat {
+            delegate?.socketClientHeartbeat(msgObject as! Heartbeat)
+        } else if msgObject is SocketError {
+            delegate?.socketClientError(msgObject as! SocketError)
+        }
     }
     
     public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
