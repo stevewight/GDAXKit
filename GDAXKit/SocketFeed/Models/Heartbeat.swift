@@ -12,7 +12,7 @@ public class Heartbeat:Decodable {
     public let lastTradeID:Int
     public let productID:String
     public let sequence:Int
-    public let time:String
+    public let time:Date
     
     enum CodingKeys:String, CodingKey {
         case lastTradeID = "last_trade_id"

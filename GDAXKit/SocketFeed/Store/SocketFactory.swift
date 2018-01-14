@@ -30,27 +30,31 @@ class SocketFactory: NSObject {
     
     private class func buildSocketObject(_ data:Data,_ type:SocketMsgType)->Decodable {
         var socketObject:Decodable?
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .custom({ (decoder)-> Date in
+            return DateDecoder.custom(decoder: decoder)
+        })
         do {
             switch type {
             case .heartbeat:
-                socketObject = try JSONDecoder().decode(
+                socketObject = try decoder.decode(
                     Heartbeat.self,
                     from: data
                 )
             case .ticker:
-                socketObject = try JSONDecoder().decode(
+                socketObject = try decoder.decode(
                     SocketTicker.self,
                     from: data
                 )
             case .none, .snapshot, .update, .subscribtions:
-                socketObject = try JSONDecoder().decode(
+                socketObject = try decoder.decode(
                     SocketError.self,
                     from: data
                 )
             }
         } catch {
             print("Issue building socket object")
-            print(error.localizedDescription)
+            print(error)
         }
         return socketObject
     }

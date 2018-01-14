@@ -21,7 +21,7 @@ public class SocketTicker:Decodable {
     public let bestBid:String
     public let bestAsk:String
     public let side:String
-    public let time:String
+    public let time:Date
     public let lastSize:String
     
     enum CodingKeys:String, CodingKey {
