@@ -28,6 +28,7 @@
 		AA46806F200477CC001FFA32 /* SocketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468066200477CC001FFA32 /* SocketFactory.swift */; };
 		AA468070200477CC001FFA32 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468067200477CC001FFA32 /* SocketManager.swift */; };
 		AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468068200477CC001FFA32 /* SocketRequest.swift */; };
+		AA75BA80200B31DE00DBBA36 /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		AA468066200477CC001FFA32 /* SocketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFactory.swift; sourceTree = "<group>"; };
 		AA468067200477CC001FFA32 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		AA468068200477CC001FFA32 /* SocketRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketRequest.swift; sourceTree = "<group>"; };
+		AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		AA46803B20047699001FFA32 /* GDAXKit */ = {
 			isa = PBXGroup;
 			children = (
+				AA75BA7E200B316F00DBBA36 /* Shared */,
 				AA46805D200477CC001FFA32 /* SocketFeed */,
 				AA468044200477BA001FFA32 /* MarketData */,
 				AA46803D20047699001FFA32 /* Info.plist */,
@@ -158,6 +161,14 @@
 				AA468068200477CC001FFA32 /* SocketRequest.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		AA75BA7E200B316F00DBBA36 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				AA468069200477CC001FFA32 /* Heartbeat.swift in Sources */,
 				AA46806B200477CC001FFA32 /* SocketMsg.swift in Sources */,
 				AA468070200477CC001FFA32 /* SocketManager.swift in Sources */,
+				AA75BA80200B31DE00DBBA36 /* DateDecoder.swift in Sources */,
 				AA46806C200477CC001FFA32 /* SocketTicker.swift in Sources */,
 				AA468056200477BA001FFA32 /* ServerTime.swift in Sources */,
 				AA468058200477BA001FFA32 /* Ticker.swift in Sources */,
