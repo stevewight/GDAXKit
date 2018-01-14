@@ -36,8 +36,6 @@ enum Router:URLRequestProtocol {
         if !items.isEmpty {
             components.queryItems = items
         }
-        print("component urls: \(components.url!)")
-        print("----------------------------------")
         return components.url!
     }
     
