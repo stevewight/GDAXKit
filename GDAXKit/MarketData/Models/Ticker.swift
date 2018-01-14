@@ -15,7 +15,7 @@ public class Ticker:Decodable {
     public let bid:String
     public let ask:String
     public let volume:String
-    public let time:String
+    public let time:Date
     
     enum CodingKeys: String, CodingKey {
         case tradeID = "trade_id"

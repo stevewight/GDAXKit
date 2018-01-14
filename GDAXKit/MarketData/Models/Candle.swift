@@ -9,7 +9,7 @@
 import UIKit
 
 public class Candle: Decodable {
-    public let time:Double
+    public let time:Date
     public let low:Double
     public let high:Double
     public let open:Double
@@ -18,7 +18,7 @@ public class Candle: Decodable {
     
     public required init(from decoder:Decoder) throws {
         var container = try decoder.unkeyedContainer()
-        time = try container.decode(Double.self)
+        time = try container.decode(Date.self)
         low = try container.decode(Double.self)
         high = try container.decode(Double.self)
         open = try container.decode(Double.self)

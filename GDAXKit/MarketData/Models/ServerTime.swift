@@ -9,6 +9,6 @@
 import UIKit
 
 public class ServerTime:Decodable {
-    public let iso:String
+    public let iso:Date
     public let epoch:Double
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 public class Trade:Decodable {
-    public let time:String
+    public let time:Date
     public let tradeID:Int
     public let price:String
     public let side:String
