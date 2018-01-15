@@ -1,8 +1,8 @@
 # GDAXKit
-  Unofficial Swift 4 client library for accessing 💰*[gdax.com's](www.gdax.com)*💰 public market data through both the rest api and real time websocket feed
+  Unofficial Swift 4 client library for accessing 💰*[gdax.com's](https://www.gdax.com)*💰 public market data through both the REST [Market Data](https://docs.gdax.com/#market-data) API and the real time [Websocket Feed](https://docs.gdax.com/#websocket-feed)
   
 ## Getting Started
-  [Gdax.com](www.gdax.com) is "The Most Trusted Digital Asset Exchange" and offers an extensive real time market data API for a handful of the biggest 💵*cryptoCurrencies*💵
+  [Gdax.com](https://www.gdax.com) is "The Most Trusted Digital Asset Exchange" and offers an extensive real time market data API for a handful of the biggest 💵*cryptoCurrencies*💵
   
 ### The Docs
   Take a look at the [API Docs](https://docs.gdax.com/) for an overview and more information on the publicly available currency data.  
@@ -56,19 +56,27 @@ client.loadProducts { products in
 * loadTime ([Server Time](https://docs.gdax.com/#time))
 
 ### Socket Feed (SocketClient)
-To access the websocket's real time updates, conform to SocketClientDelegate protocol methods:
+To access the websocket's real time updates, conform to the ***SocketClientDelegate*** protocol methods:
 
 ```swift
 extension MyViewController: SocketClientDelegate {
 	func socketClientConnected() { /.../ }
 	func socketClientDisconnected() { /.../ }
-	func socketClientMessageObject(_ msgObj:Decodable) { 
-		// The msgObj will be either a SocketTicker or Heartbeat
-		// based on the public method called
-	}
+	func socketClientTick(_ tick:SocketTicker)
+  	func socketClientHeartbeat(_ heartbeat:Heartbeat)
+   	func socketClientError(_ error:SocketError)
 }
 ```
-Now we initialize our SocketClient, using dependency injection to pass our delegate object in, then start our specific channels stream:
+#### SocketClientDelegate Method Life-Cycle
+When the client first connects successfully to the socket at ***wss://ws-feed.gdax.com***, the ```socketClientConnected``` method is called.
+
+Depending upon the SocketClient method that is called either the ```socketClientTick``` or ```socketClientHeartbeat``` delegate method will begin to be called.  Any time the socket encounters an error, the ```socketClientError``` method will be called.
+
+Finally the ```socketClientDisconnected``` method is called when connection to the socket ends.
+
+#### Initializing Websocket Communication
+
+To begin the socket stream, initialize the SocketClient by passing our delegate object in.  Once you have initiliazed the SocketClient, and conformed to the ***SocketClientDelegate*** methods above, call one of the start stream methods:
 
 ```swift
 class MyViewController: UIViewController {
@@ -76,7 +84,7 @@ class MyViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		// Use Products you want data for, from client.loadProducts
-		let products = /... Product array from Client .../
+		let products = /... Product array from MarketClient .../
 	
 		// Initialize SocketClient and pass self as delegate
 		socketClient = SocketClient(delegate:self)
@@ -93,6 +101,9 @@ class MyViewController: UIViewController {
 
 * startTickerStream ([Ticker Socket](https://docs.gdax.com/#the-code-classprettyprinttickercode-channel))
 * startHeartbeatStream ([Heartbeat Socket](https://docs.gdax.com/#the-code-classprettyprintheartbeatcode-channel))
+
+## Pre-Release Version
+This is a pre-release version of GDAXKit and although it is stable and should be working in all the above cases, things will be added, changed and potentially break.
 
 ## License
 GDAXKit is released under the _***MIT***_ license
