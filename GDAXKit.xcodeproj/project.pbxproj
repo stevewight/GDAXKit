@@ -29,6 +29,7 @@
 		AA468070200477CC001FFA32 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468067200477CC001FFA32 /* SocketManager.swift */; };
 		AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468068200477CC001FFA32 /* SocketRequest.swift */; };
 		AA75BA80200B31DE00DBBA36 /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */; };
+		AACFC112200D58F50027D0A8 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFC111200D58F50027D0A8 /* DateRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		AA468067200477CC001FFA32 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		AA468068200477CC001FFA32 /* SocketRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketRequest.swift; sourceTree = "<group>"; };
 		AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		AACFC111200D58F50027D0A8 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AA75BA7F200B31DE00DBBA36 /* DateDecoder.swift */,
+				AACFC111200D58F50027D0A8 /* DateRange.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				AA46806D200477CC001FFA32 /* SocketChannel.swift in Sources */,
 				AA46805C200477BA001FFA32 /* Router.swift in Sources */,
 				AA46806A200477CC001FFA32 /* SocketError.swift in Sources */,
+				AACFC112200D58F50027D0A8 /* DateRange.swift in Sources */,
 				AA468054200477BA001FFA32 /* Currency.swift in Sources */,
 				AA468069200477CC001FFA32 /* Heartbeat.swift in Sources */,
 				AA46806B200477CC001FFA32 /* SocketMsg.swift in Sources */,
