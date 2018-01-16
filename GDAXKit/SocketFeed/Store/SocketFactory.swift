@@ -32,7 +32,7 @@ class SocketFactory: NSObject {
         var socketObject:Decodable?
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .custom({ (decoder)-> Date in
-            return DateDecoder.custom(decoder: decoder)
+            return decoder.iso8601Custom()
         })
         do {
             switch type {
