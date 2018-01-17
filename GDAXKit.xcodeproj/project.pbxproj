@@ -31,6 +31,7 @@
 		AACFC112200D58F50027D0A8 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFC111200D58F50027D0A8 /* DateRange.swift */; };
 		AAEA376C200EB0DC00FEFD35 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA376B200EB0DC00FEFD35 /* Params.swift */; };
 		AAF78B0C200EBB6D002F6DAC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF78B0B200EBB6D002F6DAC /* Extensions.swift */; };
+		AAF78B0E200EC7DC002F6DAC /* Granularity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF78B0D200EC7DC002F6DAC /* Granularity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		AACFC111200D58F50027D0A8 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		AAEA376B200EB0DC00FEFD35 /* Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		AAF78B0B200EBB6D002F6DAC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AAF78B0D200EC7DC002F6DAC /* Granularity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Granularity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				AA468050200477BA001FFA32 /* Factory.swift */,
 				AA468051200477BA001FFA32 /* Router.swift */,
 				AAEA376B200EB0DC00FEFD35 /* Params.swift */,
+				AAF78B0D200EC7DC002F6DAC /* Granularity.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				AA468058200477BA001FFA32 /* Ticker.swift in Sources */,
 				AA468055200477BA001FFA32 /* Product.swift in Sources */,
 				AA46805B200477BA001FFA32 /* Factory.swift in Sources */,
+				AAF78B0E200EC7DC002F6DAC /* Granularity.swift in Sources */,
 				AA468057200477BA001FFA32 /* Stat.swift in Sources */,
 				AA468053200477BA001FFA32 /* Candle.swift in Sources */,
 				AA468059200477BA001FFA32 /* Trade.swift in Sources */,

@@ -44,11 +44,12 @@ public class MarketClient: NSObject {
         }
     }
     
-    public func loadHistoricRates(productID:String, complete:@escaping (_ candles:[Candle])->Void) {
-        let params = [String:String]() //TODO: Implelemth historic params
-        makeRequest(router: Router.historic(productID: productID, params:params), factory: Factory.historic()) { items in
+    public func loadHistoricRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+        let params = Params.historic(range: range, granularity: granularity)
+        makeRequest(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
             complete(items as! [Candle])
         }
+        
     }
     
     public func load24HourStats(productID:String, complete:@escaping (_ stats:[Stat])->Void) {

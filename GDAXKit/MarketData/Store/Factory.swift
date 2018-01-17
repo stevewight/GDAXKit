@@ -52,9 +52,14 @@ enum Factory {
     
     private func decoder()->JSONDecoder {
         let jsonDecoder = JSONDecoder()
-        jsonDecoder.dateDecodingStrategy = .custom({ (decoder)-> Date in
-            return decoder.iso8601Custom()
-        })
+        switch self {
+        case .historic():
+            jsonDecoder.dateDecodingStrategy = .secondsSince1970
+        default:
+            jsonDecoder.dateDecodingStrategy = .custom({ (decoder)-> Date in
+                return decoder.iso8601Custom()
+            })
+        }
         return jsonDecoder
     }
     
