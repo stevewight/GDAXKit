@@ -49,7 +49,13 @@ public class MarketClient: NSObject {
         makeRequest(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
             complete(items as! [Candle])
         }
-        
+    }
+    
+    public func loadHistoricRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+        let params = Params.historicDates(start: start, end: end, granularity: granularity)
+        makeRequest(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
+            complete(items as! [Candle])
+        }
     }
     
     public func load24HourStats(productID:String, complete:@escaping (_ stats:[Stat])->Void) {
