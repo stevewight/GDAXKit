@@ -38,22 +38,35 @@ $ pod install
 let client = MarketClient()
 
 // Call one of the public endpoint methods
-client.loadProducts { products in
+client.products { products in
 	// Do lots of cool things w/each *Product* object
 }
 
-// All methods take a closure to handle returned objects
 ```
+To get access to historic data you can use the ```DateRange``` and ```Granularity``` enums provided by GDAXKit:
+
+```swift
+let pid = "BTC-USD"
+let range = DateRange.fiveDays
+let granularity = Granularity.oneHour
+
+client.historicRates(productID:pid, range:range, granularity:granularity) { candles in
+	// Do things w/each *Candle* object
+}
+```
+
+All methods take a closure to handle returned objects
+
 #### MarketClient's Public Interface
 
-* loadProducts ([Products Docs](https://docs.gdax.com/#products))
-* loadCurrencies ([Currencies](https://docs.gdax.com/#currencies))
-* loadBook ([Order Book](https://docs.gdax.com/#get-product-order-book))
-* loadTicker ([Ticker](https://docs.gdax.com/#get-product-ticker))
-* loadTrades ([Trades](https://docs.gdax.com/#get-trades))
-* loadHistoricRates ([Historic Rates](https://docs.gdax.com/#get-historic-rates))
-* load24HourStats ([24 Hour Stats](https://docs.gdax.com/#get-24hr-stats))
-* loadTime ([Server Time](https://docs.gdax.com/#time))
+* products ([Products Docs](https://docs.gdax.com/#products))
+* currencies ([Currencies](https://docs.gdax.com/#currencies))
+* book ([Order Book](https://docs.gdax.com/#get-product-order-book))
+* ticker ([Ticker](https://docs.gdax.com/#get-product-ticker))
+* trades ([Trades](https://docs.gdax.com/#get-trades))
+* historicRates ([Historic Rates](https://docs.gdax.com/#get-historic-rates))
+* twentyFourHourStats ([24 Hour Stats](https://docs.gdax.com/#get-24hr-stats))
+* time ([Server Time](https://docs.gdax.com/#time))
 
 ### Socket Feed (SocketClient)
 To access the websocket's real time updates, conform to the ***SocketClientDelegate*** protocol methods:
