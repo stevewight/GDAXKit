@@ -28,6 +28,7 @@
 		AA46806F200477CC001FFA32 /* SocketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468066200477CC001FFA32 /* SocketFactory.swift */; };
 		AA468070200477CC001FFA32 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468067200477CC001FFA32 /* SocketManager.swift */; };
 		AA468071200477CC001FFA32 /* SocketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA468068200477CC001FFA32 /* SocketRequest.swift */; };
+		AA95875F201131340003468E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA95875E201131340003468E /* Request.swift */; };
 		AACFC112200D58F50027D0A8 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFC111200D58F50027D0A8 /* DateRange.swift */; };
 		AAEA376C200EB0DC00FEFD35 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA376B200EB0DC00FEFD35 /* Params.swift */; };
 		AAF78B0C200EBB6D002F6DAC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF78B0B200EBB6D002F6DAC /* Extensions.swift */; };
@@ -58,6 +59,7 @@
 		AA468066200477CC001FFA32 /* SocketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFactory.swift; sourceTree = "<group>"; };
 		AA468067200477CC001FFA32 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		AA468068200477CC001FFA32 /* SocketRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketRequest.swift; sourceTree = "<group>"; };
+		AA95875E201131340003468E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		AACFC111200D58F50027D0A8 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		AAEA376B200EB0DC00FEFD35 /* Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		AAF78B0B200EBB6D002F6DAC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				AA468051200477BA001FFA32 /* Router.swift */,
 				AAEA376B200EB0DC00FEFD35 /* Params.swift */,
 				AAF78B0D200EC7DC002F6DAC /* Granularity.swift */,
+				AA95875E201131340003468E /* Request.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				AA46806C200477CC001FFA32 /* SocketTicker.swift in Sources */,
 				AA468056200477BA001FFA32 /* ServerTime.swift in Sources */,
 				AA468058200477BA001FFA32 /* Ticker.swift in Sources */,
+				AA95875F201131340003468E /* Request.swift in Sources */,
 				AA468055200477BA001FFA32 /* Product.swift in Sources */,
 				AA46805B200477BA001FFA32 /* Factory.swift in Sources */,
 				AAF78B0E200EC7DC002F6DAC /* Granularity.swift in Sources */,

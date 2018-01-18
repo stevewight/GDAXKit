@@ -1,6 +1,6 @@
 //
 //  MarketClient.swift
-//  c01ns
+//  GDAXKit
 //
 //  Created by Steve on 12/28/17.
 //  Copyright © 2017 Steve Wight. All rights reserved.
@@ -9,79 +9,63 @@
 import UIKit
 
 public class MarketClient: NSObject {
-
-    let baseURL = "https://api.gdax.com"
-    var dataTask: URLSessionDataTask?
-    let session = URLSession.shared
     
-    public func loadProducts(complete:@escaping (_ products:[Product])->Void) {
-        makeRequest(router: Router.products(), factory: Factory.products()) { items in
+    let request = Request()
+    
+    public func products(complete:@escaping (_ products:[Product])->Void) {
+        request.run(router: Router.products(), factory: Factory.products()) { items in
             complete(items as! [Product])
         }
     }
     
-    public func loadCurrencies(complete:@escaping (_ currencies:[Currency])->Void) {
-        makeRequest(router: Router.currencies(), factory: Factory.currencies()) { items in
+    public func currencies(complete:@escaping (_ currencies:[Currency])->Void) {
+        request.run(router: Router.currencies(), factory: Factory.currencies()) { items in
             complete(items as! [Currency])
         }
     }
     
-    public func loadBook(productID:String, complete:@escaping (_ books:[Book])->Void) {
-        makeRequest(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { items in
+    public func book(productID:String, complete:@escaping (_ books:[Book])->Void) {
+        request.run(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { items in
             complete(items as! [Book])
         }
     }
     
-    public func loadTicker(productID:String, complete:@escaping (_ tickers:[Ticker])->Void) {
-        makeRequest(router: Router.ticker(productID: productID), factory: Factory.ticker()) { items in
+    public func ticker(productID:String, complete:@escaping (_ tickers:[Ticker])->Void) {
+        request.run(router: Router.ticker(productID: productID), factory: Factory.ticker()) { items in
             complete(items as! [Ticker])
         }
     }
     
-    public func loadTrades(productID:String, complete:@escaping (_ trades:[Trade])->Void) {
-        makeRequest(router: Router.trades(productID: productID), factory: Factory.trades()) { items in
+    public func trades(productID:String, complete:@escaping (_ trades:[Trade])->Void) {
+        request.run(router: Router.trades(productID: productID), factory: Factory.trades()) { items in
             complete(items as! [Trade])
         }
     }
     
-    public func loadHistoricRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+    public func historicRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
         let params = Params.historic(range: range, granularity: granularity)
-        makeRequest(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
+        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
             complete(items as! [Candle])
         }
     }
     
-    public func loadHistoricRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+    public func historicRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
         let params = Params.historicDates(start: start, end: end, granularity: granularity)
-        makeRequest(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
+        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
             complete(items as! [Candle])
         }
     }
     
-    public func load24HourStats(productID:String, complete:@escaping (_ stats:[Stat])->Void) {
-        makeRequest(router: Router.stats(productID: productID), factory: Factory.stats()) { items in
+    public func twentyFourHourStats(productID:String, complete:@escaping (_ stats:[Stat])->Void) {
+        request.run(router: Router.stats(productID: productID), factory: Factory.stats()) { items in
             complete(items as! [Stat])
         }
     }
     
-    public func loadTime(complete:@escaping (_ times:[ServerTime])->Void) {
-        makeRequest(router: Router.time(), factory: Factory.time()) { items in
+    public func time(complete:@escaping (_ times:[ServerTime])->Void) {
+        request.run(router: Router.time(), factory: Factory.time()) { items in
             complete(items as! [ServerTime])
         }
-    }
-    
-    private func makeRequest(router:Router, factory:Factory, complete:@escaping (_ items:[Any])->Void) {
-        dataTask = session.dataTask(with: router.request()) { data, response, error in
-            let response = response as? HTTPURLResponse
-            
-            if response?.statusCode == 200 {
-                let items = factory.build(data!)
-                complete(items)
-            } else {
-                print("Incorrect status code")
-            }
-        }
-        dataTask?.resume()
     }
     
 }
