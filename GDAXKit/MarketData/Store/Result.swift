@@ -11,4 +11,13 @@ import UIKit
 public enum Result<Value> {
     case success(Value)
     case failure(Error)
+    
+    public func value()->Any {
+        switch self {
+        case .success(let value):
+            return value
+        case .failure(_):
+            return []
+        }
+    }
 }
