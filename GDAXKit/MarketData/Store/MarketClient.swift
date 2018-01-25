@@ -12,59 +12,59 @@ public class MarketClient: NSObject {
     
     let request = Request()
     
-    public func products(complete:@escaping (_ products:[Product])->Void) {
-        request.run(router: Router.products(), factory: Factory.products()) { items in
-            complete(items as! [Product])
+    public func products(complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.products(), factory: Factory.products()) { result in
+            complete(result)
         }
     }
     
-    public func currencies(complete:@escaping (_ currencies:[Currency])->Void) {
-        request.run(router: Router.currencies(), factory: Factory.currencies()) { items in
-            complete(items as! [Currency])
+    public func currencies(complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.currencies(), factory: Factory.currencies()) { result in
+            complete(result)
         }
     }
     
-    public func book(productID:String, complete:@escaping (_ books:[Book])->Void) {
-        request.run(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { items in
-            complete(items as! [Book])
+    public func book(productID:String, complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { result in
+            complete(result)
         }
     }
     
-    public func ticker(productID:String, complete:@escaping (_ tickers:[Ticker])->Void) {
-        request.run(router: Router.ticker(productID: productID), factory: Factory.ticker()) { items in
-            complete(items as! [Ticker])
+    public func ticker(productID:String, complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.ticker(productID: productID), factory: Factory.ticker()) { result in
+            complete(result)
         }
     }
     
-    public func trades(productID:String, complete:@escaping (_ trades:[Trade])->Void) {
-        request.run(router: Router.trades(productID: productID), factory: Factory.trades()) { items in
-            complete(items as! [Trade])
+    public func trades(productID:String, complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.trades(productID: productID), factory: Factory.trades()) { result in
+            complete(result)
         }
     }
     
-    public func historicRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+    public func historicRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ result:Result<Any>)->Void) {
         let params = Params.historic(range: range, granularity: granularity)
-        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
-            complete(items as! [Candle])
+        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { result in
+            complete(result)
         }
     }
     
-    public func historicRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle])->Void) {
+    public func historicRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ result:Result<Any>)->Void) {
         let params = Params.historicDates(start: start, end: end, granularity: granularity)
-        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { items in
-            complete(items as! [Candle])
+        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { result in
+            complete(result)
         }
     }
     
-    public func twentyFourHourStats(productID:String, complete:@escaping (_ stats:[Stat])->Void) {
-        request.run(router: Router.stats(productID: productID), factory: Factory.stats()) { items in
-            complete(items as! [Stat])
+    public func twentyFourHourStats(productID:String, complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.stats(productID: productID), factory: Factory.stats()) { result in
+            complete(result)
         }
     }
     
-    public func time(complete:@escaping (_ times:[ServerTime])->Void) {
-        request.run(router: Router.time(), factory: Factory.time()) { items in
-            complete(items as! [ServerTime])
+    public func time(complete:@escaping (_ result:Result<Any>)->Void) {
+        request.run(router: Router.time(), factory: Factory.time()) { result in
+            complete(result)
         }
     }
     

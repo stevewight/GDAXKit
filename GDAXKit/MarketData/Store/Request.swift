@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum RequestError: Error {
+    case statusCode
+    case response
+}
+
 class Request {
 
     let baseURL = "https://api.gdax.com"
@@ -16,17 +21,20 @@ class Request {
     
     public func run(router:Router,
                     factory:Factory,
-                    complete:@escaping (_ items:[Any])->Void) {
+                    complete:@escaping (_ result:Result<Any>)->Void) {
         
         dataTask = session.dataTask(with: router.request()) { data, response, error in
             let response = response as? HTTPURLResponse
+            let result:Result<Any>!
             
             if response?.statusCode == 200 {
                 let items = factory.build(data!)
-                complete(items)
+                result = Result.success(items)
             } else {
                 print("Incorrect status code")
+                result = Result.failure(RequestError.statusCode)
             }
+            complete(result)
         }
         dataTask?.resume()
     }
