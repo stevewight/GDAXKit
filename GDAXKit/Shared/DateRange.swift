@@ -9,6 +9,7 @@
 import UIKit
 
 public enum DateRange {
+    case oneDay
     case threeDays
     case fiveDays
     case oneWeek
@@ -24,6 +25,8 @@ public enum DateRange {
     
     public func start()->Date {
         switch self {
+        case .oneDay:
+            return dateBack(unit: .day, amount: 1)
         case .threeDays:
             return dateBack(unit: .day, amount: 3)
         case .fiveDays:
