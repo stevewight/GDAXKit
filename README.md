@@ -30,7 +30,7 @@ $ pod install
 ```
   
 ## Usage
-  Depending upon the data you want to access, you will use one of the two client objects.
+  Depending upon the data you want to access, you will use one of the two client objects provided.  ``MarketClient`` for accessing snapshots of market data and ``SocketClient`` for accessing real-time market data updates for orders and trades.
   
 ### Market Data API (MarketClient)
 ```swift
@@ -38,8 +38,14 @@ $ pod install
 let client = MarketClient()
 
 // Call one of the public endpoint methods
-client.products { products in
-	// Do lots of cool things w/each *Product* object
+client.products { products, result in
+	// Check if our call was a success or failure
+	switch result {
+	case .success(_):
+		// Do stuff with the provided products
+	case .failure(let error):
+		// Handle the error
+	}
 }
 
 ```
@@ -50,12 +56,17 @@ let pid = "BTC-USD"
 let range = DateRange.fiveDays
 let granularity = Granularity.oneHour
 
-client.historicRates(productID:pid, range:range, granularity:granularity) { candles in
-	// Do things w/each *Candle* object
+client.historicRates(productID:pid, range:range, granularity:granularity) { candles, result in
+	switch result {
+	case .success(_):
+		// Do stuff with the provided candles
+	case .failure(let error):
+		// Handle error
+	}
 }
 ```
 
-All methods take a closure to handle returned objects
+All ``MarketClient`` methods take a closure to handle returned objects
 
 #### MarketClient's Public Interface
 
