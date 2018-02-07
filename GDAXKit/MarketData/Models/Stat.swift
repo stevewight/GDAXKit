@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Stat:Decodable {
+public class Stat:Codable {
     public let open:String
     public let high:String
     public let low:String

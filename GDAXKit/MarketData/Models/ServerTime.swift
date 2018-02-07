@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ServerTime:Decodable {
+public class ServerTime:Codable {
     public let iso:Date
     public let epoch:Double
 }

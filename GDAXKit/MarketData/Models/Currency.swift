@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Currency:Decodable {
+public class Currency:Codable {
     public let id:String
     public let name:String
     public let minSize:String

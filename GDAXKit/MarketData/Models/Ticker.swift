@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Ticker:Decodable {
+public class Ticker:Codable {
     public let tradeID:Int
     public let price:String
     public let size:String

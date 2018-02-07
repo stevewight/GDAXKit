@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Candle: Decodable {
+public class Candle:Codable {
     public let time:Date
     public let low:Double
     public let high:Double

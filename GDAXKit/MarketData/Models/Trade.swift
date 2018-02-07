@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Trade:Decodable {
+public class Trade:Codable {
     public let time:Date
     public let tradeID:Int
     public let price:String

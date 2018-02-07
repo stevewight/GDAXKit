@@ -14,13 +14,13 @@ enum BookLevel:Int {
     case three = 3
 }
 
-public class Book:Decodable {
+public class Book:Codable {
     public let sequence:Int
     public let bids:[Order]
     public let asks:[Order]
 }
 
-public class Order:Decodable {
+public class Order:Codable {
     public let price:String
     public let size:String
     public let numOrders:Int

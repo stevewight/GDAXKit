@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Product:Decodable {
+public class Product:Codable {
     public let id:String
     public let baseCurrency:String
     public let quoteCurrency:String
