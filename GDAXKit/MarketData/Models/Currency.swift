@@ -9,15 +9,22 @@
 import UIKit
 
 public class Currency:Codable {
-    public let id:String
-    public let name:String
-    public let minSize:String
-    public let status:String
-    public let message:String?
+    public var id:String
+    public var name:String
+    public var minSize:String
+    public var status:String
+    public var message:String?
     
     enum CodingKeys: String, CodingKey {
         case id, name, status, message
         case minSize = "min_size"
+    }
+    
+    public init(id:String, name:String) {
+        self.id = id
+        self.name = name
+        self.minSize = "0.0"
+        self.status = "offline"
     }
     
 }
