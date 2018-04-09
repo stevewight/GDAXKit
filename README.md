@@ -56,7 +56,7 @@ let pid = "BTC-USD"
 let range = DateRange.fiveDays
 let granularity = Granularity.oneHour
 
-client.historicRates(productID:pid, range:range, granularity:granularity) { candles, result in
+client.historic(pid:pid, range:range, granularity:granularity) { candles, result in
 	switch result {
 	case .success(_):
 		// Do stuff with the provided candles
@@ -75,8 +75,8 @@ All ``MarketClient`` methods take a closure to handle returned objects
 * book ([Order Book](https://docs.gdax.com/#get-product-order-book))
 * ticker ([Ticker](https://docs.gdax.com/#get-product-ticker))
 * trades ([Trades](https://docs.gdax.com/#get-trades))
-* historicRates ([Historic Rates](https://docs.gdax.com/#get-historic-rates))
-* twentyFourHourStats ([24 Hour Stats](https://docs.gdax.com/#get-24hr-stats))
+* historic ([Historic Rates](https://docs.gdax.com/#get-historic-rates))
+* stats ([24 Hour Stats](https://docs.gdax.com/#get-24hr-stats))
 * time ([Server Time](https://docs.gdax.com/#time))
 
 ### Socket Feed (SocketClient)
