@@ -24,40 +24,40 @@ public class MarketClient: NSObject {
         }
     }
     
-    public func book(productID:String, complete:@escaping (_ books:[Book],_ result:Result<Any>)->Void) {
-        request.run(router: Router.book(productID: productID, level:.one), factory: Factory.book()) { result in
+    public func book(pid:String, complete:@escaping (_ books:[Book],_ result:Result<Any>)->Void) {
+        request.run(router: Router.book(productID: pid, level:.one), factory: Factory.book()) { result in
             complete(Unwrap.book(result), result)
         }
     }
     
-    public func ticker(productID:String, complete:@escaping (_ tickers:[Ticker],_ result:Result<Any>)->Void) {
-        request.run(router: Router.ticker(productID: productID), factory: Factory.ticker()) { result in
+    public func ticker(pid:String, complete:@escaping (_ tickers:[Ticker],_ result:Result<Any>)->Void) {
+        request.run(router: Router.ticker(productID: pid), factory: Factory.ticker()) { result in
             complete(Unwrap.ticker(result), result)
         }
     }
     
-    public func trades(productID:String, complete:@escaping (_ trades:[Trade],_ result:Result<Any>)->Void) {
-        request.run(router: Router.trades(productID: productID), factory: Factory.trades()) { result in
+    public func trades(pid:String, complete:@escaping (_ trades:[Trade],_ result:Result<Any>)->Void) {
+        request.run(router: Router.trades(productID: pid), factory: Factory.trades()) { result in
             complete(Unwrap.trades(result), result)
         }
     }
     
-    public func historicRates(productID:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle],_ result:Result<Any>)->Void) {
+    public func historic(pid:String, range:DateRange, granularity:Granularity, complete:@escaping (_ candles:[Candle],_ result:Result<Any>)->Void) {
         let params = Params.historic(range: range, granularity: granularity)
-        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { result in
+        request.run(router: Router.historic(productID: pid, params: params.build()), factory: Factory.historic()) { result in
             complete(Unwrap.candles(result), result)
         }
     }
     
-    public func historicRates(productID:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle],_ result:Result<Any>)->Void) {
+    public func historic(pid:String, start:Date, end:Date, granularity:Granularity, complete:@escaping (_ candles:[Candle],_ result:Result<Any>)->Void) {
         let params = Params.historicDates(start: start, end: end, granularity: granularity)
-        request.run(router: Router.historic(productID: productID, params: params.build()), factory: Factory.historic()) { result in
+        request.run(router: Router.historic(productID: pid, params: params.build()), factory: Factory.historic()) { result in
             complete(Unwrap.candles(result), result)
         }
     }
     
-    public func twentyFourHourStats(productID:String, complete:@escaping (_ stats:[Stat],_ result:Result<Any>)->Void) {
-        request.run(router: Router.stats(productID: productID), factory: Factory.stats()) { result in
+    public func stats(pid:String, complete:@escaping (_ stats:[Stat],_ result:Result<Any>)->Void) {
+        request.run(router: Router.stats(productID: pid), factory: Factory.stats()) { result in
             complete(Unwrap.stats(result), result)
         }
     }
