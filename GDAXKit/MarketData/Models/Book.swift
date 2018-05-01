@@ -15,15 +15,15 @@ enum BookLevel:Int {
 }
 
 public class Book:Codable {
-    public let sequence:Int
-    public let bids:[Order]
-    public let asks:[Order]
+    public var sequence:Int = 0
+    public var bids = [Order]()
+    public var asks = [Order]()
 }
 
 public class Order:Codable {
-    public let price:String
-    public let size:String
-    public let numOrders:Int
+    public var price:String = ""
+    public var size:String = ""
+    public var numOrders:Int = 0
     
     public required init(from decoder:Decoder) throws {
         var container = try decoder.unkeyedContainer()

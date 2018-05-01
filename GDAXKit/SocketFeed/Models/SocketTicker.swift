@@ -9,20 +9,20 @@
 import UIKit
 
 public class SocketTicker:Decodable {
-    public let tradeID:Int
-    public let sequence:Int
-    public let productID:String
-    public let price:String
-    public let open24h:String
-    public let volume24h:String
-    public let low24h:String
-    public let high24h:String
-    public let volume30d:String
-    public let bestBid:String
-    public let bestAsk:String
-    public let side:String
-    public let time:Date
-    public let lastSize:String
+    public var tradeID:Int = 0
+    public var sequence:Int = 0
+    public var productID:String = ""
+    public var price:String = ""
+    public var open24h:String = ""
+    public var volume24h:String = ""
+    public var low24h:String = ""
+    public var high24h:String = ""
+    public var volume30d:String = ""
+    public var bestBid:String = ""
+    public var bestAsk:String = ""
+    public var side:String = ""
+    public var time:Date = Date()
+    public var lastSize:String = ""
     
     enum CodingKeys:String, CodingKey {
         case tradeID = "trade_id"

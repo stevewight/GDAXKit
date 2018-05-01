@@ -9,11 +9,11 @@
 import UIKit
 
 public class Trade:Codable {
-    public let time:Date
-    public let tradeID:Int
-    public let price:String
-    public let side:String
-    public let size:String
+    public var time:Date = Date()
+    public var tradeID:Int = 0
+    public var price:String = ""
+    public var side:String = ""
+    public var size:String = ""
     
     enum CodingKeys: String, CodingKey {
         case tradeID = "trade_id"

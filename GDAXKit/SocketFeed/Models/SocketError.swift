@@ -9,5 +9,5 @@
 import UIKit
 
 public class SocketError:Decodable {
-    public let type:String
+    public var type:String = ""
 }

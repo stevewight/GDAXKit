@@ -9,10 +9,10 @@
 import UIKit
 
 public class Heartbeat:Decodable {
-    public let lastTradeID:Int
-    public let productID:String
-    public let sequence:Int
-    public let time:Date
+    public var lastTradeID:Int = 0
+    public var productID:String = ""
+    public var sequence:Int = 0
+    public var time:Date = Date()
     
     enum CodingKeys:String, CodingKey {
         case lastTradeID = "last_trade_id"

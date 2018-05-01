@@ -56,7 +56,7 @@ class SocketFactory: NSObject {
             print("Issue building socket object")
             print(error)
         }
-        return socketObject
+        return socketObject!
     }
     
 }

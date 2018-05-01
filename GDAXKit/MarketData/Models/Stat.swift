@@ -9,12 +9,12 @@
 import UIKit
 
 public class Stat:Codable {
-    public let open:String
-    public let high:String
-    public let low:String
-    public let volume:String
-    public let last:String
-    public let volume30Day:String
+    public var open:String = ""
+    public var high:String = ""
+    public var low:String = ""
+    public var volume:String = ""
+    public var last:String = ""
+    public var volume30Day:String = ""
     
     enum CodingKeys: String, CodingKey {
         case open, high, low, volume, last

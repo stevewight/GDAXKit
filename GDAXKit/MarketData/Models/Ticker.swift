@@ -9,13 +9,13 @@
 import UIKit
 
 public class Ticker:Codable {
-    public let tradeID:Int
-    public let price:String
-    public let size:String
-    public let bid:String
-    public let ask:String
-    public let volume:String
-    public let time:Date
+    public var tradeID:Int = 0
+    public var price:String = ""
+    public var size:String = ""
+    public var bid:String = ""
+    public var ask:String = ""
+    public var volume:String = ""
+    public var time:Date = Date()
     
     enum CodingKeys: String, CodingKey {
         case tradeID = "trade_id"
