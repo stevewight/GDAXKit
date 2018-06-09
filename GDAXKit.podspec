@@ -9,13 +9,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "GDAXKit"
-  s.version      = "0.0.1"
-  s.summary      = "Open source client library for accessing gdax.com's public market data"
-  s.homepage     = "http://github.com/stevewight"
-  s.license      = "MIT"
+  s.version      = "0.0.8"
+  s.summary      = "Client library for gdax.com's public API"
+  s.homepage     = "https://github.com/stevewight/GDAXKit"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Steve Wight" => "stevendouglaswight@gmail.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "https://github.com/stevewight/GDAXKit.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/stevewight/GDAXKit.git", :tag => "0.0.8" }
   s.source_files = "GDAXKit/**/*.{h,m,swift}"
   s.pod_target_xcconfig = { "SWIFT_VERSION" => "4" }
   s.dependency 'Starscream', '~> 3.0'

@@ -8,26 +8,6 @@
   Take a look at the [API Docs](https://docs.gdax.com/) for an overview and more information on the publicly available currency data.  
   
 Note: *GDAXKit* currently only makes public data available and does not allow for accessing endpoints or websockets that require authentication.
-
-## Installation
-The easiest way to use GDAXKit is with CocoaPods
-
-### Installation with CocoaPods
-To integrate GDAXKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-platform :ios, '11.0'
-
-target 'TargetName' do
-  pod 'GDAXKit', :git => 'https://github.com/stevewight/GDAXKit.git'
-end
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
   
 ## Usage
   Depending upon the data you want to access, you will use one of the two client objects provided.  ``MarketClient`` for accessing snapshots of market data and ``SocketClient`` for accessing real-time market data updates for orders and trades.
@@ -125,6 +105,26 @@ class MyViewController: UIViewController {
 
 * startTickerStream ([Ticker Socket](https://docs.gdax.com/#the-code-classprettyprinttickercode-channel))
 * startHeartbeatStream ([Heartbeat Socket](https://docs.gdax.com/#the-code-classprettyprintheartbeatcode-channel))
+
+## Installation
+The easiest way to use GDAXKit is with CocoaPods
+
+### Installation with CocoaPods
+To integrate GDAXKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+platform :ios, '11.0'
+
+target 'TargetName' do
+  pod 'GDAXKit'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ## Pre-Release Version
 This is a pre-release version of GDAXKit and although it is stable and should be working in all the above cases, things will be added, changed and potentially break.
